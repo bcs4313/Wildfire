@@ -1,0 +1,95 @@
+commit 312d5bcb53436e646c64c29679c0a0e2bd2d8b24
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Thu Mar 11 23:47:35 2021 -0500
+
+    added flag -LN which gives a percentage chance for a lightning strike to occur, setting a tree on fire and/or prolonging the life of a current fire.
+
+commit 6b7dcef165461106a725d04610ebefd1e5e2799b
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Thu Mar 11 22:38:43 2021 -0500
+
+    Cleaning up code and finishing documentation
+
+commit 2c0d67376b6fbed6f4bf2cbc9c9aa3fbc7b0a9e7
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Thu Mar 11 21:53:31 2021 -0500
+
+    added method to notify view of changing variables, called notify_view. added method to display statistics, called display_stats. update() method now uses notify_view to give updates about the changes in the grid. Display mode and print mode now print the statistics that they should, using the display_stats method.
+
+commit c249b5ee4313a4c71f43ad06a84cc977842e6509
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Thu Mar 11 18:30:53 2021 -0500
+
+    Finished display and print mode functionality. Still requires debug information to be printed on console.
+
+commit d9824d18ae2f5d30c19f6a4578e1dca7f9e2ab8a
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Tue Mar 9 18:31:45 2021 -0500
+
+    Adjusted spread and burn_eval function to account for dynamic changes in neighbor count. Added neighbor_eval function that returns whether or not a cell qualifies as a tree neighbor.
+
+commit 47866a909f745361aca4917688fe947475be3003
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Mon Mar 8 20:39:44 2021 -0500
+
+    changed method names in header for cross-compatability. Updated initialization method in view.c to properly account for print_count setting.
+
+commit ab2a3aa9f719df4467902ba14c1bfb6b555ba8af
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Mon Mar 8 20:14:01 2021 -0500
+
+    Made display_print_mode and display_overlay mode static in view.c. Updated parse_args and main in wildfire.c to deal with usage requests properly. Updated wildfire.h to include all methods that are intended to be shared.
+
+commit 13677587c473bd4724b94a5742b607742dd0d746
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Mon Mar 8 19:54:50 2021 -0500
+
+    Removed some code in wildfire.c that was used for debugging purposes. Added file named view.c, which is responsible for controlling what is printed on the console. It is still a work in progress, only being able to display the grid ONLY in print mode.
+
+commit 0587f16df59c230da3236ccb317d4776b238ac59
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Mon Mar 8 18:39:07 2021 -0500
+
+    Made multiple functions that did not need to be global static in both spreader.c and wildfire.c. Added a parse_args method in wilfire.c, that takes the arguments placed into the program and updates the program's settings accordingly. This was done to increase program modularity.
+
+commit ee578567a1057460d80881c6aad5130c4d0c3c74
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Mon Mar 8 18:28:15 2021 -0500
+
+    Updated documentation on functions in spreader.c. Spread method was modified to return a tree instead of simply modifying the array. This makes it possible to use the pre-image and post-image model for the update method. The update method was created, which applies the spread method on ALL nodes and updates them using a copy of the original array as a pre-image for the spread method to interpet.
+
+commit 414608958e2732a189f55ee88482ff23ccd8bbd2
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Mon Mar 8 18:04:31 2021 -0500
+
+    updated spread function to also account for trees in the BURNED, EMPTY, and BURNING states respectively.
+
+commit 1e7d860fd25475e28a9a3714f50927c1d16e5000
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Mon Mar 8 17:47:41 2021 -0500
+
+    Added the file spreader.c. spreader.c is responsible for the methods that determine whether nodes within our grid should catch fire or not. Current Methods: The spread method determines this and modifies nodes when needed. The burn_eval method simply is there to check if a tree is burning, and the init method is used to pass static variables to spreader.c.
+
+commit 3b7c51eeee7e3319d4d64b35fc25d1d1a260f520
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Sun Mar 7 00:52:40 2021 -0500
+
+    Created the initialize grid method, which takes the variables parsed by getopt and creates the starting grid for our simulation. Main now prints the initialized grid. Small changes to the header file for compatability.
+
+commit 0ab47078e15f6568d129d13bf1ea38c5117c6939
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Sat Mar 6 22:50:53 2021 -0500
+
+    Added the header file wildfire.h. The file at the moment contains a struct representing each tree cell in our grid and an enumeration of the states in the tree itself.
+
+commit 7d798e5a7c8c5c22bc660d08e013d7d8292d7b43
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Sat Mar 6 22:02:45 2021 -0500
+
+    Created an argument parser in main that works with the flags associated with the wildfire program. Constants and statics for these flags are now defined.
+
+commit df7477130be47004a7bb91863198a2806a2feb11
+Author: Cody C Smith <bcs4313@cs.rit.edu>
+Date:   Sat Mar 6 20:42:05 2021 -0500
+
+    Initial Project Commit

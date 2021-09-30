@@ -1,0 +1,59 @@
+============================= ASSIGNMENT REPORT ============================
+Assignment name is: Wildfire
+My name is:         <<<Cody Smith>>>
+
+	[USE PLAIN TEXT]
+	[INSERT ANSWERS AFTER EACH QUESTION AND ADD MORE LINES AS NEEDED.]
+	[MAKE YOUR ANSWERS SHORT AND TO THE POINT. BULLET POINTS ARE GOOD.]
+
+===== In what cases does the program run correctly?  =================
+The program runs correctly in the cases where the flags provided exist
+within the program and only when the values stored in those flags fall
+within their defined ranges. Order does not matter when it comes to 
+the arguments of this program.
+
+===== In what cases does the program fail and how?  ==================
+When invalid flag chars are supplied, or when the values attached to a flag
+do not fall within the proper range defined for each flag. In my program, parse_args
+directs an EXIT_FAILURE to main if any of these issues occur.
+
+===== If applicable, what were the extra credit results?  ============
+The extra credit results gave the program the ability to use a lightning flag
+which inputted the percentage chance of a lightning strike to occur at a random spot.
+A lightning strike is signified by the symbol '!'.
+
+===== If applicable, describe how to run the extra credit.  ==========
+Add the flag in the form -LN, with N being a value from 0-100 when launching
+the program. Default value is 0.
+
+===== How much time did I spend on the project?  =====================
+20+ Hours over the span of 5 days.
+
+===== What did I learn?  =============================================
+- General version management with git.
+- More sophisticated knowledge of how header files function. Putting structs and vars in header 
+files was something I didn't do before. 
+- Node based interactions with matrixes.
+- How to parse arguments within a system that allows flags to be in ANY
+order. 
+- How to transfer static variables from one file to another.
+- A couple more ways to do modular programming better. 
+- How to properly document c files with @param, @return, @author, etc.
+
+===== What was easy in this assignment?  =============================
+The easier parts were in the beginning, processing arguments, and 
+initializing a grid wasn't too difficult.
+
+===== What gave me problems or troubles?  ============================
+Cross interaction between my c files. It requires a lot of time and 
+energy to think it out in an efficient way. Trying to split how
+the view is shown with display mode and print mode was painful.
+
+===== What would be the most important improvement for the project?  =
+I would like better documentation on the display.c file. It was a little confusing
+to interpret what it was actually doing at first.
+
+===== What else would I have liked to do for this assignment?  =======
+Have different types of trees with varying amounts of time before they fully burn out (EC Idea). 
+
+============================================================================
